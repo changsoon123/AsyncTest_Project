@@ -81,7 +81,7 @@ const startServer = async () => {
     await app.listen({ port, host });
     app.log.info(`Server listening on ${host}:${port}`);
     app.log.info(`GraphQL IDE available at http://${host}:${port}/api/graphql`);
-  } catch (err) {
+  } catch (err: any) { // Cast error to any
     app.log.error(err);
     process.exit(1);
   }

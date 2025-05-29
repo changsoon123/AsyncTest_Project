@@ -3,15 +3,15 @@
 ## 전체 프로젝트 상태
 - **시작일**: 2025년 6월 1일
 - **완료 예정**: 2025년 9월 말 (16주)
-- **현재 진행률**: 0% (프로젝트 시작)
+- **현재 진행률**: 12.5% (Week 1 완료)
 
 ## 주차별 진행 상황
 
-### Week 1-2: 인프라 구축 (0% 완료)
-- [ ] **백엔드 기반**: Node.js + Fastify + GraphQL
-- [ ] **프론트엔드 기반**: Next.js 14 + React 18
-- [ ] **데이터베이스**: PostgreSQL + Redis + Pinecone 설정
-- [ ] **개발 환경**: Docker + TypeScript 설정
+### Week 1-2: 인프라 구축 (100% 완료)
+- [x] **백엔드 기반**: Node.js + Fastify + GraphQL
+- [x] **프론트엔드 기반**: Next.js 14 + React 18
+- [x] **데이터베이스**: PostgreSQL + Redis + Pinecone 설정
+- [x] **개발 환경**: Docker + TypeScript 설정
 
 ### Week 3-4: 코어 기능 개발 (0% 완료)
 - [ ] **사용자 인증**: JWT 기반 로그인/회원가입
