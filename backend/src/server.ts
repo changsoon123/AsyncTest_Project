@@ -6,6 +6,8 @@ import mercurius from 'mercurius';
 import { buildSubgraphSchema } from '@apollo/subgraph';
 import { gql } from 'graphql-tag';
 import redis from './lib/redis'; // Import Redis client
+import authRoutes from './routes/auth'; // Import authRoutes
+import productsRoutes from './routes/products'; // Import productsRoutes
 
 // Define a basic GraphQL schema
 const typeDefs = gql`
@@ -68,6 +70,12 @@ const startServer = async () => {
       // Add data sources or user context here
     }),
   });
+
+  // Register authentication routes
+  await app.register(authRoutes, { prefix: '/auth' });
+
+  // Register products routes
+  await app.register(productsRoutes, { prefix: '/products' });
 
   // Basic route
   app.get('/', async (request, reply) => {
