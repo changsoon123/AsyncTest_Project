@@ -8,6 +8,7 @@ import { gql } from 'graphql-tag';
 import redis from './lib/redis'; // Import Redis client
 import authRoutes from './routes/auth'; // Import authRoutes
 import productsRoutes from './routes/products'; // Import productsRoutes
+import cartRoutes from './routes/cart'; // Import cartRoutes
 
 // Define a basic GraphQL schema
 const typeDefs = gql`
@@ -76,6 +77,9 @@ const startServer = async () => {
 
   // Register products routes
   await app.register(productsRoutes, { prefix: '/products' });
+
+  // Register cart routes
+  await app.register(cartRoutes, { prefix: '/cart' });
 
   // Basic route
   app.get('/', async (request, reply) => {
