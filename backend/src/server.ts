@@ -9,6 +9,7 @@ import redis from './lib/redis'; // Import Redis client
 import authRoutes from './routes/auth'; // Import authRoutes
 import productsRoutes from './routes/products'; // Import productsRoutes
 import cartRoutes from './routes/cart'; // Import cartRoutes
+import searchRoutes from './routes/search'; // Import searchRoutes
 
 // Define a basic GraphQL schema
 const typeDefs = gql`
@@ -80,6 +81,9 @@ const startServer = async () => {
 
   // Register cart routes
   await app.register(cartRoutes, { prefix: '/cart' });
+
+  // Register search routes
+  await app.register(searchRoutes, { prefix: '/search' });
 
   // Basic route
   app.get('/', async (request, reply) => {

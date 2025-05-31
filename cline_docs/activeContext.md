@@ -1,9 +1,9 @@
 # 현재 작업 컨텍스트
 
 ## 현재 진행 상황
-- **현재 스프린트**: Week 1 - 기반 인프라 구축
-- **오늘의 주요 작업**: 프로젝트 초기 설정 및 개발 환경 구성 완료
-- **작업 중인 기능**: 없음 (Week 1 목표 달성)
+- **현재 스프린트**: Week 2 - 코어 기능 개발
+- **오늘의 주요 작업**: 코어 기능 개발 완료
+- **작업 중인 기능**: 없음 (Week 2 목표 달성)
 
 ## 다음 우선순위 작업
 1. **즉시 시작**: 
@@ -16,9 +16,13 @@
    - [x] React + Next.js 프론트엔드 기본 구조
    - [x] PostgreSQL + Redis 데이터베이스 연결
    - [x] Jest + Playwright 테스트 환경 설정
+   - [x] 사용자 인증: JWT 기반 로그인/회원가입
+   - [x] 상품 관리: 상품 CRUD API
+   - [x] 장바구니: 실시간 장바구니 기능
+   - [x] 기본 검색: 텍스트 기반 상품 검색
 
 ## 현재 이슈 및 블로커
-- 없음 (Week 1 목표 달성)
+- 없음 (Week 2 목표 달성)
 
 ## 최근 완료된 작업
 - Cline Memory Bank 설정 완료
@@ -34,6 +38,11 @@
     - PostgreSQL (Prisma) 및 Redis 연결 설정 (`.env`, `prisma/schema.prisma`, `backend/src/lib/redis.ts`)
     - Jest 테스트 환경 설정 (`jest.config.js`, `jest.setup.js`)
     - Playwright 테스트 환경 설정 (`playwright.config.ts`, `e2e/example.spec.ts`)
+- **Week 2 코어 기능 개발 완료**:
+    - 사용자 인증 (JWT 기반 로그인/회원가입)
+    - 상품 관리 (CRUD API)
+    - 장바구니 (실시간 장바구니 기능)
+    - 기본 검색 (텍스트 기반 상품 검색)
 
 ## 컨텍스트 메모
 - LLM 통합 부분은 3-4주차에 집중 예정
