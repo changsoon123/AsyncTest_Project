@@ -11,20 +11,20 @@
 ```
 
 ┌─────────────────────────────────────────────────────────┐
-│                 Presentation Layer                      │
-│   (Next.js 14 + React 18 + Mobile Apps + Admin Panel)   │
+│ Presentation Layer │
+│ (Next.js 14 + React 18 + Mobile Apps + Admin Panel) │
 ├─────────────────────────────────────────────────────────┤
-│                Business Logic Layer                     │
-│        (Fastify + GraphQL + AI Orchestrator)            │
+│ Business Logic Layer │
+│ (Fastify + GraphQL + AI Orchestrator) │
 ├─────────────────────────────────────────────────────────┤
-│               Commerce Modules Layer                    │
-│  [Product] [Order] [User] [Payment] [AI-Rec] [Search]   │
+│ Commerce Modules Layer │
+│ [Product] [Order] [User] [Payment] [AI-Rec] [Search] │
 ├─────────────────────────────────────────────────────────┤
-│             Best-in-Breed Applications                  │
-│   [PostgreSQL] [Redis] [Pinecone] [Kafka] [S3]          │
+│ Best-in-Breed Applications │
+│ [PostgreSQL] [Redis] [Pinecone] [Kafka] [S3] │
 ├─────────────────────────────────────────────────────────┤
-│              Third-Party Integration                    │
-│   [Stripe] [SendGrid] [AWS] [OpenAI] [Claude]           │
+│ Third-Party Integration │
+│ [Stripe] [SendGrid] [AWS] [OpenAI] [Claude] │
 └─────────────────────────────────────────────────────────┘
 
 ```
