@@ -8,12 +8,12 @@ const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jest-environment-jsdom',
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/frontend/src/$1', // Adjust path for frontend source
+    '^@/(.*)$': '<rootDir>/frontend/$1', // Adjust path for frontend source
   },
   collectCoverageFrom: [
-    'frontend/src/**/*.{js,jsx,ts,tsx}',
-    '!frontend/src/**/*.d.ts',
-    '!frontend/src/**/*.stories.{js,jsx,ts,tsx}',
+    'frontend/**/*.{js,jsx,ts,tsx}',
+    '!frontend/**/*.d.ts',
+    '!frontend/**/*.stories.{js,jsx,ts,tsx}',
   ],
   coverageThreshold: {
     global: {
