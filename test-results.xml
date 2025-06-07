@@ -1,0 +1,827 @@
+<testsuites id="" name="" tests="35" failures="35" skipped="0" errors="0" time="10.169948">
+<testsuite name="ai-edge-cases.spec.ts" timestamp="2025-06-07T05:28:37.642Z" hostname="chromium" tests="5" failures="5" skipped="0" time="0.047" errors="0">
+<testcase name="AI 기반 엣지 케이스 테스트 › AI 생성 엣지 케이스 테스트" classname="ai-edge-cases.spec.ts" time="0.009">
+<failure message="ai-edge-cases.spec.ts:108:7 AI 생성 엣지 케이스 테스트" type="FAILURE">
+<![CDATA[  [chromium] › ai-edge-cases.spec.ts:108:7 › AI 기반 엣지 케이스 테스트 › AI 생성 엣지 케이스 테스트 ───────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\chromium_headless_shell-1169\chrome-win\headless_shell.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\ai-edge-cases-AI-기반-엣지-케이스-테스트-AI-생성-엣지-케이스-테스트-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ai-edge-cases-AI-기반-엣지-케이스-테스트-AI-생성-엣지-케이스-테스트-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="고급 테스트 기능 › 주문 대시보드 시각적 일관성" classname="ai-edge-cases.spec.ts" time="0.009">
+<failure message="ai-edge-cases.spec.ts:132:7 주문 대시보드 시각적 일관성" type="FAILURE">
+<![CDATA[  [chromium] › ai-edge-cases.spec.ts:132:7 › 고급 테스트 기능 › 주문 대시보드 시각적 일관성 ───────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\chromium_headless_shell-1169\chrome-win\headless_shell.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\ai-edge-cases-고급-테스트-기능-주문-대시보드-시각적-일관성-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ai-edge-cases-고급-테스트-기능-주문-대시보드-시각적-일관성-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="고급 테스트 기능 › 대량 동시 주문 처리 성능" classname="ai-edge-cases.spec.ts" time="0.009">
+<failure message="ai-edge-cases.spec.ts:142:7 대량 동시 주문 처리 성능" type="FAILURE">
+<![CDATA[  [chromium] › ai-edge-cases.spec.ts:142:7 › 고급 테스트 기능 › 대량 동시 주문 처리 성능 ────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\chromium_headless_shell-1169\chrome-win\headless_shell.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\ai-edge-cases-고급-테스트-기능-대량-동시-주문-처리-성능-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ai-edge-cases-고급-테스트-기능-대량-동시-주문-처리-성능-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="고급 테스트 기능 › 네트워크 요청 패턴 분석" classname="ai-edge-cases.spec.ts" time="0.009">
+<failure message="ai-edge-cases.spec.ts:166:7 네트워크 요청 패턴 분석" type="FAILURE">
+<![CDATA[  [chromium] › ai-edge-cases.spec.ts:166:7 › 고급 테스트 기능 › 네트워크 요청 패턴 분석 ─────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\chromium_headless_shell-1169\chrome-win\headless_shell.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\ai-edge-cases-고급-테스트-기능-네트워크-요청-패턴-분석-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ai-edge-cases-고급-테스트-기능-네트워크-요청-패턴-분석-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="고급 테스트 기능 › 주문 페이지 접근성 검증" classname="ai-edge-cases.spec.ts" time="0.011">
+<failure message="ai-edge-cases.spec.ts:192:7 주문 페이지 접근성 검증" type="FAILURE">
+<![CDATA[  [chromium] › ai-edge-cases.spec.ts:192:7 › 고급 테스트 기능 › 주문 페이지 접근성 검증 ─────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\chromium_headless_shell-1169\chrome-win\headless_shell.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\ai-edge-cases-고급-테스트-기능-주문-페이지-접근성-검증-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ai-edge-cases-고급-테스트-기능-주문-페이지-접근성-검증-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="example.spec.ts" timestamp="2025-06-07T05:28:37.642Z" hostname="chromium" tests="2" failures="2" skipped="0" time="0.019" errors="0">
+<testcase name="has title" classname="example.spec.ts" time="0.009">
+<failure message="example.spec.ts:3:5 has title" type="FAILURE">
+<![CDATA[  [chromium] › example.spec.ts:3:5 › has title ─────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\chromium_headless_shell-1169\chrome-win\headless_shell.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\example-has-title-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\example-has-title-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="get started link" classname="example.spec.ts" time="0.01">
+<failure message="example.spec.ts:10:5 get started link" type="FAILURE">
+<![CDATA[  [chromium] › example.spec.ts:10:5 › get started link ─────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\chromium_headless_shell-1169\chrome-win\headless_shell.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\example-get-started-link-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\example-get-started-link-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="ai-edge-cases.spec.ts" timestamp="2025-06-07T05:28:37.642Z" hostname="firefox" tests="5" failures="5" skipped="0" time="0.045" errors="0">
+<testcase name="AI 기반 엣지 케이스 테스트 › AI 생성 엣지 케이스 테스트" classname="ai-edge-cases.spec.ts" time="0.009">
+<failure message="ai-edge-cases.spec.ts:108:7 AI 생성 엣지 케이스 테스트" type="FAILURE">
+<![CDATA[  [firefox] › ai-edge-cases.spec.ts:108:7 › AI 기반 엣지 케이스 테스트 › AI 생성 엣지 케이스 테스트 ────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\firefox-1482\firefox\firefox.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\ai-edge-cases-AI-기반-엣지-케이스-테스트-AI-생성-엣지-케이스-테스트-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ai-edge-cases-AI-기반-엣지-케이스-테스트-AI-생성-엣지-케이스-테스트-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="고급 테스트 기능 › 주문 대시보드 시각적 일관성" classname="ai-edge-cases.spec.ts" time="0.008">
+<failure message="ai-edge-cases.spec.ts:132:7 주문 대시보드 시각적 일관성" type="FAILURE">
+<![CDATA[  [firefox] › ai-edge-cases.spec.ts:132:7 › 고급 테스트 기능 › 주문 대시보드 시각적 일관성 ────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\firefox-1482\firefox\firefox.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\ai-edge-cases-고급-테스트-기능-주문-대시보드-시각적-일관성-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ai-edge-cases-고급-테스트-기능-주문-대시보드-시각적-일관성-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="고급 테스트 기능 › 대량 동시 주문 처리 성능" classname="ai-edge-cases.spec.ts" time="0.009">
+<failure message="ai-edge-cases.spec.ts:142:7 대량 동시 주문 처리 성능" type="FAILURE">
+<![CDATA[  [firefox] › ai-edge-cases.spec.ts:142:7 › 고급 테스트 기능 › 대량 동시 주문 처리 성능 ─────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\firefox-1482\firefox\firefox.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\ai-edge-cases-고급-테스트-기능-대량-동시-주문-처리-성능-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ai-edge-cases-고급-테스트-기능-대량-동시-주문-처리-성능-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="고급 테스트 기능 › 네트워크 요청 패턴 분석" classname="ai-edge-cases.spec.ts" time="0.01">
+<failure message="ai-edge-cases.spec.ts:166:7 네트워크 요청 패턴 분석" type="FAILURE">
+<![CDATA[  [firefox] › ai-edge-cases.spec.ts:166:7 › 고급 테스트 기능 › 네트워크 요청 패턴 분석 ──────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\firefox-1482\firefox\firefox.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\ai-edge-cases-고급-테스트-기능-네트워크-요청-패턴-분석-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ai-edge-cases-고급-테스트-기능-네트워크-요청-패턴-분석-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="고급 테스트 기능 › 주문 페이지 접근성 검증" classname="ai-edge-cases.spec.ts" time="0.009">
+<failure message="ai-edge-cases.spec.ts:192:7 주문 페이지 접근성 검증" type="FAILURE">
+<![CDATA[  [firefox] › ai-edge-cases.spec.ts:192:7 › 고급 테스트 기능 › 주문 페이지 접근성 검증 ──────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\firefox-1482\firefox\firefox.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\ai-edge-cases-고급-테스트-기능-주문-페이지-접근성-검증-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ai-edge-cases-고급-테스트-기능-주문-페이지-접근성-검증-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="example.spec.ts" timestamp="2025-06-07T05:28:37.642Z" hostname="firefox" tests="2" failures="2" skipped="0" time="0.019" errors="0">
+<testcase name="has title" classname="example.spec.ts" time="0.008">
+<failure message="example.spec.ts:3:5 has title" type="FAILURE">
+<![CDATA[  [firefox] › example.spec.ts:3:5 › has title ──────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\firefox-1482\firefox\firefox.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\example-has-title-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\example-has-title-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="get started link" classname="example.spec.ts" time="0.011">
+<failure message="example.spec.ts:10:5 get started link" type="FAILURE">
+<![CDATA[  [firefox] › example.spec.ts:10:5 › get started link ──────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\firefox-1482\firefox\firefox.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\example-get-started-link-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\example-get-started-link-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="ai-edge-cases.spec.ts" timestamp="2025-06-07T05:28:37.642Z" hostname="webkit" tests="5" failures="5" skipped="0" time="0.045" errors="0">
+<testcase name="AI 기반 엣지 케이스 테스트 › AI 생성 엣지 케이스 테스트" classname="ai-edge-cases.spec.ts" time="0.007">
+<failure message="ai-edge-cases.spec.ts:108:7 AI 생성 엣지 케이스 테스트" type="FAILURE">
+<![CDATA[  [webkit] › ai-edge-cases.spec.ts:108:7 › AI 기반 엣지 케이스 테스트 › AI 생성 엣지 케이스 테스트 ─────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\webkit-2158\Playwright.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\ai-edge-cases-AI-기반-엣지-케이스-테스트-AI-생성-엣지-케이스-테스트-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ai-edge-cases-AI-기반-엣지-케이스-테스트-AI-생성-엣지-케이스-테스트-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="고급 테스트 기능 › 주문 대시보드 시각적 일관성" classname="ai-edge-cases.spec.ts" time="0.01">
+<failure message="ai-edge-cases.spec.ts:132:7 주문 대시보드 시각적 일관성" type="FAILURE">
+<![CDATA[  [webkit] › ai-edge-cases.spec.ts:132:7 › 고급 테스트 기능 › 주문 대시보드 시각적 일관성 ─────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\webkit-2158\Playwright.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\ai-edge-cases-고급-테스트-기능-주문-대시보드-시각적-일관성-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ai-edge-cases-고급-테스트-기능-주문-대시보드-시각적-일관성-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="고급 테스트 기능 › 대량 동시 주문 처리 성능" classname="ai-edge-cases.spec.ts" time="0.006">
+<failure message="ai-edge-cases.spec.ts:142:7 대량 동시 주문 처리 성능" type="FAILURE">
+<![CDATA[  [webkit] › ai-edge-cases.spec.ts:142:7 › 고급 테스트 기능 › 대량 동시 주문 처리 성능 ──────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\webkit-2158\Playwright.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\ai-edge-cases-고급-테스트-기능-대량-동시-주문-처리-성능-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ai-edge-cases-고급-테스트-기능-대량-동시-주문-처리-성능-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="고급 테스트 기능 › 네트워크 요청 패턴 분석" classname="ai-edge-cases.spec.ts" time="0.012">
+<failure message="ai-edge-cases.spec.ts:166:7 네트워크 요청 패턴 분석" type="FAILURE">
+<![CDATA[  [webkit] › ai-edge-cases.spec.ts:166:7 › 고급 테스트 기능 › 네트워크 요청 패턴 분석 ───────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\webkit-2158\Playwright.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\ai-edge-cases-고급-테스트-기능-네트워크-요청-패턴-분석-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ai-edge-cases-고급-테스트-기능-네트워크-요청-패턴-분석-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="고급 테스트 기능 › 주문 페이지 접근성 검증" classname="ai-edge-cases.spec.ts" time="0.01">
+<failure message="ai-edge-cases.spec.ts:192:7 주문 페이지 접근성 검증" type="FAILURE">
+<![CDATA[  [webkit] › ai-edge-cases.spec.ts:192:7 › 고급 테스트 기능 › 주문 페이지 접근성 검증 ───────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\webkit-2158\Playwright.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\ai-edge-cases-고급-테스트-기능-주문-페이지-접근성-검증-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ai-edge-cases-고급-테스트-기능-주문-페이지-접근성-검증-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="example.spec.ts" timestamp="2025-06-07T05:28:37.642Z" hostname="webkit" tests="2" failures="2" skipped="0" time="0.024" errors="0">
+<testcase name="has title" classname="example.spec.ts" time="0.014">
+<failure message="example.spec.ts:3:5 has title" type="FAILURE">
+<![CDATA[  [webkit] › example.spec.ts:3:5 › has title ───────────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\webkit-2158\Playwright.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\example-has-title-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\example-has-title-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="get started link" classname="example.spec.ts" time="0.01">
+<failure message="example.spec.ts:10:5 get started link" type="FAILURE">
+<![CDATA[  [webkit] › example.spec.ts:10:5 › get started link ───────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\webkit-2158\Playwright.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\example-get-started-link-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\example-get-started-link-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="ai-edge-cases.spec.ts" timestamp="2025-06-07T05:28:37.642Z" hostname="Mobile Chrome" tests="5" failures="5" skipped="0" time="0.039" errors="0">
+<testcase name="AI 기반 엣지 케이스 테스트 › AI 생성 엣지 케이스 테스트" classname="ai-edge-cases.spec.ts" time="0.008">
+<failure message="ai-edge-cases.spec.ts:108:7 AI 생성 엣지 케이스 테스트" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › ai-edge-cases.spec.ts:108:7 › AI 기반 엣지 케이스 테스트 › AI 생성 엣지 케이스 테스트 ──────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\chromium_headless_shell-1169\chrome-win\headless_shell.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\ai-edge-cases-AI-기반-엣지-케이스-테스트-AI-생성-엣지-케이스-테스트-Mobile-Chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ai-edge-cases-AI-기반-엣지-케이스-테스트-AI-생성-엣지-케이스-테스트-Mobile-Chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="고급 테스트 기능 › 주문 대시보드 시각적 일관성" classname="ai-edge-cases.spec.ts" time="0.008">
+<failure message="ai-edge-cases.spec.ts:132:7 주문 대시보드 시각적 일관성" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › ai-edge-cases.spec.ts:132:7 › 고급 테스트 기능 › 주문 대시보드 시각적 일관성 ──────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\chromium_headless_shell-1169\chrome-win\headless_shell.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\ai-edge-cases-고급-테스트-기능-주문-대시보드-시각적-일관성-Mobile-Chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ai-edge-cases-고급-테스트-기능-주문-대시보드-시각적-일관성-Mobile-Chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="고급 테스트 기능 › 대량 동시 주문 처리 성능" classname="ai-edge-cases.spec.ts" time="0.007">
+<failure message="ai-edge-cases.spec.ts:142:7 대량 동시 주문 처리 성능" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › ai-edge-cases.spec.ts:142:7 › 고급 테스트 기능 › 대량 동시 주문 처리 성능 ───────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\chromium_headless_shell-1169\chrome-win\headless_shell.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\ai-edge-cases-고급-테스트-기능-대량-동시-주문-처리-성능-Mobile-Chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ai-edge-cases-고급-테스트-기능-대량-동시-주문-처리-성능-Mobile-Chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="고급 테스트 기능 › 네트워크 요청 패턴 분석" classname="ai-edge-cases.spec.ts" time="0.008">
+<failure message="ai-edge-cases.spec.ts:166:7 네트워크 요청 패턴 분석" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › ai-edge-cases.spec.ts:166:7 › 고급 테스트 기능 › 네트워크 요청 패턴 분석 ────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\chromium_headless_shell-1169\chrome-win\headless_shell.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\ai-edge-cases-고급-테스트-기능-네트워크-요청-패턴-분석-Mobile-Chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ai-edge-cases-고급-테스트-기능-네트워크-요청-패턴-분석-Mobile-Chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="고급 테스트 기능 › 주문 페이지 접근성 검증" classname="ai-edge-cases.spec.ts" time="0.008">
+<failure message="ai-edge-cases.spec.ts:192:7 주문 페이지 접근성 검증" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › ai-edge-cases.spec.ts:192:7 › 고급 테스트 기능 › 주문 페이지 접근성 검증 ────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\chromium_headless_shell-1169\chrome-win\headless_shell.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\ai-edge-cases-고급-테스트-기능-주문-페이지-접근성-검증-Mobile-Chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ai-edge-cases-고급-테스트-기능-주문-페이지-접근성-검증-Mobile-Chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="example.spec.ts" timestamp="2025-06-07T05:28:37.642Z" hostname="Mobile Chrome" tests="2" failures="2" skipped="0" time="0.018" errors="0">
+<testcase name="has title" classname="example.spec.ts" time="0.01">
+<failure message="example.spec.ts:3:5 has title" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › example.spec.ts:3:5 › has title ────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\chromium_headless_shell-1169\chrome-win\headless_shell.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\example-has-title-Mobile-Chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\example-has-title-Mobile-Chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="get started link" classname="example.spec.ts" time="0.008">
+<failure message="example.spec.ts:10:5 get started link" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › example.spec.ts:10:5 › get started link ────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\chromium_headless_shell-1169\chrome-win\headless_shell.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\example-get-started-link-Mobile-Chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\example-get-started-link-Mobile-Chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="ai-edge-cases.spec.ts" timestamp="2025-06-07T05:28:37.642Z" hostname="Mobile Safari" tests="5" failures="5" skipped="0" time="0.04" errors="0">
+<testcase name="AI 기반 엣지 케이스 테스트 › AI 생성 엣지 케이스 테스트" classname="ai-edge-cases.spec.ts" time="0.008">
+<failure message="ai-edge-cases.spec.ts:108:7 AI 생성 엣지 케이스 테스트" type="FAILURE">
+<![CDATA[  [Mobile Safari] › ai-edge-cases.spec.ts:108:7 › AI 기반 엣지 케이스 테스트 › AI 생성 엣지 케이스 테스트 ──────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\webkit-2158\Playwright.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\ai-edge-cases-AI-기반-엣지-케이스-테스트-AI-생성-엣지-케이스-테스트-Mobile-Safari\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ai-edge-cases-AI-기반-엣지-케이스-테스트-AI-생성-엣지-케이스-테스트-Mobile-Safari\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="고급 테스트 기능 › 주문 대시보드 시각적 일관성" classname="ai-edge-cases.spec.ts" time="0.01">
+<failure message="ai-edge-cases.spec.ts:132:7 주문 대시보드 시각적 일관성" type="FAILURE">
+<![CDATA[  [Mobile Safari] › ai-edge-cases.spec.ts:132:7 › 고급 테스트 기능 › 주문 대시보드 시각적 일관성 ──────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\webkit-2158\Playwright.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\ai-edge-cases-고급-테스트-기능-주문-대시보드-시각적-일관성-Mobile-Safari\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ai-edge-cases-고급-테스트-기능-주문-대시보드-시각적-일관성-Mobile-Safari\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="고급 테스트 기능 › 대량 동시 주문 처리 성능" classname="ai-edge-cases.spec.ts" time="0.008">
+<failure message="ai-edge-cases.spec.ts:142:7 대량 동시 주문 처리 성능" type="FAILURE">
+<![CDATA[  [Mobile Safari] › ai-edge-cases.spec.ts:142:7 › 고급 테스트 기능 › 대량 동시 주문 처리 성능 ───────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\webkit-2158\Playwright.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\ai-edge-cases-고급-테스트-기능-대량-동시-주문-처리-성능-Mobile-Safari\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ai-edge-cases-고급-테스트-기능-대량-동시-주문-처리-성능-Mobile-Safari\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="고급 테스트 기능 › 네트워크 요청 패턴 분석" classname="ai-edge-cases.spec.ts" time="0.009">
+<failure message="ai-edge-cases.spec.ts:166:7 네트워크 요청 패턴 분석" type="FAILURE">
+<![CDATA[  [Mobile Safari] › ai-edge-cases.spec.ts:166:7 › 고급 테스트 기능 › 네트워크 요청 패턴 분석 ────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\webkit-2158\Playwright.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\ai-edge-cases-고급-테스트-기능-네트워크-요청-패턴-분석-Mobile-Safari\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ai-edge-cases-고급-테스트-기능-네트워크-요청-패턴-분석-Mobile-Safari\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="고급 테스트 기능 › 주문 페이지 접근성 검증" classname="ai-edge-cases.spec.ts" time="0.005">
+<failure message="ai-edge-cases.spec.ts:192:7 주문 페이지 접근성 검증" type="FAILURE">
+<![CDATA[  [Mobile Safari] › ai-edge-cases.spec.ts:192:7 › 고급 테스트 기능 › 주문 페이지 접근성 검증 ────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\webkit-2158\Playwright.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\ai-edge-cases-고급-테스트-기능-주문-페이지-접근성-검증-Mobile-Safari\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\ai-edge-cases-고급-테스트-기능-주문-페이지-접근성-검증-Mobile-Safari\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="example.spec.ts" timestamp="2025-06-07T05:28:37.642Z" hostname="Mobile Safari" tests="2" failures="2" skipped="0" time="0.01" errors="0">
+<testcase name="has title" classname="example.spec.ts" time="0.005">
+<failure message="example.spec.ts:3:5 has title" type="FAILURE">
+<![CDATA[  [Mobile Safari] › example.spec.ts:3:5 › has title ────────────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\webkit-2158\Playwright.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\example-has-title-Mobile-Safari\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\example-has-title-Mobile-Safari\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="get started link" classname="example.spec.ts" time="0.005">
+<failure message="example.spec.ts:10:5 get started link" type="FAILURE">
+<![CDATA[  [Mobile Safari] › example.spec.ts:10:5 › get started link ────────────────────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at C:\Users\sool0\AppData\Local\ms-playwright\webkit-2158\Playwright.exe
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+
+    Error Context: ..\test-results\example-get-started-link-Mobile-Safari\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\example-get-started-link-Mobile-Safari\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
