@@ -10,6 +10,7 @@ import authRoutes from './routes/auth'; // Import authRoutes
 import productsRoutes from './routes/products'; // Import productsRoutes
 import cartRoutes from './routes/cart'; // Import cartRoutes
 import searchRoutes from './routes/search'; // Import searchRoutes
+import aiRoutes from './routes/ai'; // Import aiRoutes
 
 // Define a basic GraphQL schema
 const typeDefs = gql`
@@ -84,6 +85,9 @@ const startServer = async () => {
 
   // Register search routes
   await app.register(searchRoutes, { prefix: '/search' });
+
+  // Register AI routes
+  await app.register(aiRoutes, { prefix: '/ai' });
 
   // Basic route
   app.get('/', async (request, reply) => {
