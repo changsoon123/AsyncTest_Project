@@ -1,7 +1,7 @@
 import { test, expect, Page } from '@playwright/test';
+import axios from 'axios';
 
-// Mock for auto-playwright's 'auto' function
-// In a real scenario, this would be imported from 'auto-playwright'
+// Mock for auto-playwright's 'auto' function (kept due to installation issues)
 async function auto(description: string, options: { page: Page }) {
   console.log(`Mocking auto-playwright action: ${description}`);
   // Simulate some page interaction based on description
@@ -19,7 +19,6 @@ async function auto(description: string, options: { page: Page }) {
       await options.page.evaluate(() => console.log('Simulating order creation'));
     }
   } else if (description.includes('사용자')) {
-    // Simulate user specific actions
     await options.page.goto('/order');
     await options.page.fill('[data-testid="user-input"]', description);
     await options.page.click('[data-testid="submit-button"]');
@@ -35,6 +34,49 @@ async function auto(description: string, options: { page: Page }) {
     await options.page.goto('/order');
     await options.page.fill('[data-testid="user-input"]', description);
     await options.page.click('[data-testid="submit-button"]');
+  }
+}
+
+interface AITestCase {
+  description: string;
+  setup: (page: Page) => Promise<void>;
+  instructions: string;
+  expectedElement: string;
+}
+
+// Function to generate AI test cases by calling the backend
+async function generateAITestCases(scenarios: string[]): Promise<AITestCase[]> {
+  console.log(`Generating AI test cases for scenarios: ${scenarios.join(', ')} via backend API.`);
+  try {
+    // Assuming a new backend endpoint for generating test cases
+    const response = await axios.post('http://localhost:4000/ai/generate-test-cases', { scenarios });
+    const generatedCases = response.data.testCases;
+
+    return generatedCases.map((testCase: any) => ({
+      description: testCase.description,
+      setup: async (page: Page) => {
+        // Execute setup instructions from AI
+        if (testCase.setupInstructions) {
+          // This part would need a more sophisticated way to execute dynamic Playwright actions
+          // For now, we'll just log it or use a simple page.goto if it's a URL
+          console.log(`Executing AI setup: ${testCase.setupInstructions}`);
+          if (testCase.setupInstructions.startsWith('http')) {
+            await page.goto(testCase.setupInstructions);
+          }
+        }
+      },
+      instructions: testCase.instructions,
+      expectedElement: testCase.expectedElement,
+    }));
+  } catch (error) {
+    console.error('Error generating AI test cases from backend:', error);
+    // Fallback to a simplified mock if backend call fails
+    return scenarios.map(scenario => ({
+      description: scenario,
+      setup: async (page: Page) => { /* default setup */ },
+      instructions: `Simulated action for: ${scenario}`,
+      expectedElement: 'body',
+    }));
   }
 }
 

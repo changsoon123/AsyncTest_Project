@@ -13,6 +13,7 @@ interface LLMProvider {
   ): Promise<PersonalizedRecommendation>;
   generateProductDescription?(productData: ProductData): Promise<string>;
   processNaturalLanguageQuery?(query: string): Promise<SearchIntent>;
+  generateTestScenarios?(scenarios: string[]): Promise<AITestCase[]>; // New method for test case generation
 }
 
 export class AIOrchestrator {
@@ -23,7 +24,7 @@ export class AIOrchestrator {
     this.providers.set('claude', new ClaudeService());
   }
 
-  selectProvider(task: 'recommendation' | 'search' | 'chat' | 'product_description' | 'product_comparison'): LLMProvider {
+  selectProvider(task: 'recommendation' | 'search' | 'chat' | 'product_description' | 'product_comparison' | 'test_case_generation'): LLMProvider {
     switch (task) {
       case 'recommendation':
         return this.providers.get('claude')!; // Claude for personalized recommendations
@@ -35,6 +36,8 @@ export class AIOrchestrator {
         return this.providers.get('openai')!; // OpenAI for product descriptions
       case 'product_comparison':
         return this.providers.get('claude')!; // Claude for complex product comparisons
+      case 'test_case_generation':
+        return this.providers.get('openai')!; // OpenAI for test case generation
       default:
         return this.providers.get('openai')!;
     }
@@ -83,5 +86,13 @@ export class AIOrchestrator {
       return provider.generateEmbedding(text);
     }
     throw new Error('Embedding generation not supported by selected provider.');
+  }
+
+  async generateTestScenarios(scenarios: string[]): Promise<AITestCase[]> {
+    const provider = this.selectProvider('test_case_generation');
+    if (provider.generateTestScenarios) {
+      return provider.generateTestScenarios(scenarios);
+    }
+    throw new Error('Test case generation not supported by selected provider.');
   }
 }

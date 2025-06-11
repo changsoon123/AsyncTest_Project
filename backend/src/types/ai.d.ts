@@ -60,3 +60,10 @@ export interface PersonalizedRecommendation {
   insights: string;
   nextPurchasePrediction: string;
 }
+
+export interface AITestCase {
+  description: string;
+  setupInstructions?: string; // Instructions for Playwright setup (e.g., URL to navigate, route mocking)
+  instructions: string; // Instructions for auto-playwright
+  expectedElement: string; // Selector for the element to assert visibility
+}
