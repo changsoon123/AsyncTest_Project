@@ -1,6 +1,6 @@
 import { OpenAIService } from './openai';
 import { ClaudeService } from './claude';
-import { Product, ProductComparison, UserProfile, BrowsingHistory, PersonalizedRecommendation, ProductData, SearchIntent } from '../types/ai';
+import { Product, ProductComparison, UserProfile, BrowsingHistory, PersonalizedRecommendation, ProductData, SearchIntent, AITestCase } from '../types/ai';
 
 interface LLMProvider {
   generateResponse?(prompt: string, context?: any): Promise<string>;

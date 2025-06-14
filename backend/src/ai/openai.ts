@@ -1,5 +1,5 @@
 import OpenAI from 'openai';
-import { ProductData, SearchIntent } from '../types/ai'; // Assuming these types will be defined
+import { ProductData, SearchIntent, AITestCase } from '../types/ai';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -65,5 +65,55 @@ export class OpenAIService {
     });
 
     return JSON.parse(completion.choices[0].message.content || '{}');
+  }
+
+  async generateTestScenarios(scenarios: string[]): Promise<AITestCase[]> {
+    const completion = await openai.chat.completions.create({
+      model: 'gpt-4-turbo-preview',
+      messages: [
+        {
+          role: 'system',
+          content: `주어진 시나리오 설명을 바탕으로 Playwright E2E 테스트 케이스를 위한 구조화된 JSON 데이터를 생성하세요. 각 테스트 케이스는 'description', 'setupInstructions' (선택 사항, Playwright 페이지 설정 또는 초기 URL), 'instructions' (auto-playwright에 전달될 지시), 'expectedElement' (기대되는 UI 요소의 data-testid 또는 CSS 선택자)를 포함해야 합니다.`,
+        },
+        {
+          role: 'user',
+          content: `다음 시나리오에 대한 테스트 케이스를 생성하세요:
+${scenarios.map(s => `- ${s}`).join('\n')}
+
+결과는 다음 JSON 배열 형태로 반환하세요:
+[
+  {
+    "description": "시나리오 설명",
+    "setupInstructions": "Playwright setup (e.g., page.goto('/url'))",
+    "instructions": "auto-playwright instructions",
+    "expectedElement": "data-testid or CSS selector"
+  }
+]`,
+        },
+      ],
+      response_format: { type: 'json_object' },
+      temperature: 0.7,
+      max_tokens: 1500,
+    });
+
+    try {
+      const content = completion.choices[0].message.content;
+      if (content) {
+        const parsedContent = JSON.parse(content);
+        // Ensure it's an array and each item matches AITestCase structure
+        if (Array.isArray(parsedContent)) {
+          return parsedContent.map(item => ({
+            description: item.description || '',
+            setupInstructions: item.setupInstructions,
+            instructions: item.instructions || '',
+            expectedElement: item.expectedElement || 'body', // Default to body if not provided
+          })) as AITestCase[];
+        }
+      }
+      return [];
+    } catch (error) {
+      console.error('Failed to parse AI generated test cases:', error);
+      return [];
+    }
   }
 }

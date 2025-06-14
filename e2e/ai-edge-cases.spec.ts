@@ -110,10 +110,10 @@ test.describe('고급 테스트 기능', () => {
     await page.goto('/dashboard');
     // Mocking auto for test order generation
     await auto('10개의 테스트 주문 생성', { page });
-    // Visual regression test - requires 'axe-playwright' for screenshot comparison
-    // await expect(page).toHaveScreenshot('dashboard-with-orders.png');
-    // await expect(page.locator('.order-timeline')).toHaveScreenshot('timeline-component.png');
-    console.log('Visual regression test placeholder executed.');
+    // Visual regression test
+    await expect(page).toHaveScreenshot('dashboard-with-orders.png');
+    await expect(page.locator('.order-timeline')).toHaveScreenshot('timeline-component.png');
+    console.log('Visual regression test executed.');
   });
 
   test('대량 동시 주문 처리 성능', async ({ browser }) => {

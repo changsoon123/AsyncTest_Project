@@ -68,6 +68,10 @@ const SearchSimilarProductsSchema = Type.Object({
   })),
 });
 
+const GenerateTestCasesSchema = Type.Object({
+  scenarios: Type.Array(Type.String()),
+});
+
 export default async function aiRoutes(fastify: FastifyInstance) {
   const app = fastify.withTypeProvider<TypeBoxTypeProvider>();
 
@@ -176,5 +180,19 @@ export default async function aiRoutes(fastify: FastifyInstance) {
     const queryEmbedding = await aiOrchestrator.generateEmbedding(query);
     const similarProducts = await vectorSearchService.searchSimilarProducts(queryEmbedding, filters);
     return reply.send(similarProducts);
+  });
+
+  // Route to generate test cases
+  app.post('/generate-test-cases', {
+    schema: {
+      body: GenerateTestCasesSchema,
+      response: {
+        200: Type.Object({ testCases: Type.Array(Type.Any()) }), // Array of AITestCase, use Type.Any for now
+      },
+    },
+  }, async (request, reply) => {
+    const { scenarios } = request.body;
+    const testCases = await aiOrchestrator.generateTestScenarios(scenarios);
+    return reply.send({ testCases });
   });
 }
