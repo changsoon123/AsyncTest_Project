@@ -117,9 +117,9 @@ test.describe('고급 테스트 기능', () => {
   });
 
   test('대량 동시 주문 처리 성능', async ({ browser }) => {
-    // Mocking auto for user order completion
+    // Simulate 50 concurrent users
     const contexts = await Promise.all(
-      Array.from({ length: 5 }, () => browser.newContext()) // Reduced to 5 for quicker mock
+      Array.from({ length: 50 }, () => browser.newContext())
     );
 
     const pages = await Promise.all(
@@ -134,8 +134,7 @@ test.describe('고급 테스트 기능', () => {
     );
 
     const duration = Date.now() - startTime;
-    expect(duration).toBeLessThan(30000); // Increased timeout for mock
-    console.log(`Performance test placeholder executed. Duration: ${duration}ms`);
+    expect(duration).toBeLessThan(10000); // Expect within 10 seconds
 
     await Promise.all(contexts.map(context => context.close()));
   });
@@ -162,8 +161,11 @@ test.describe('고급 테스트 기능', () => {
       req.url.includes('/api/') && req.method === 'POST'
     );
 
-    expect(asyncRequests.length).toBeGreaterThan(0); // Changed from 3 to 0 for mock
-    console.log(`Network monitoring test placeholder executed. Async requests: ${asyncRequests.length}`);
+    expect(asyncRequests.length).toBeGreaterThan(3);
+
+    // Network timing validation
+    const timings = await page.evaluate(() => performance.getEntriesByType('navigation'));
+    expect(timings[0].loadEventEnd - timings[0].fetchStart).toBeLessThan(3000);
   });
 
   test('주문 페이지 접근성 검증', async ({ page }) => {
