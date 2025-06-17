@@ -164,7 +164,7 @@ test.describe('고급 테스트 기능', () => {
     expect(asyncRequests.length).toBeGreaterThan(3);
 
     // Network timing validation
-    const timings = await page.evaluate(() => performance.getEntriesByType('navigation'));
+    const timings = await page.evaluate(() => performance.getEntriesByType('navigation') as PerformanceNavigationTiming[]);
     expect(timings[0].loadEventEnd - timings[0].fetchStart).toBeLessThan(3000);
   });
 
