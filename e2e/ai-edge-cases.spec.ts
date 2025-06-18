@@ -1,5 +1,6 @@
 import { test, expect, Page } from '@playwright/test';
 import axios from 'axios';
+import { injectAxe, checkA11y } from 'axe-playwright'; // Import axe-playwright
 
 // Mock for auto-playwright's 'auto' function (kept due to installation issues)
 async function auto(description: string, options: { page: Page }) {
@@ -169,13 +170,23 @@ test.describe('고급 테스트 기능', () => {
   });
 
   test('주문 페이지 접근성 검증', async ({ page }) => {
-    // Requires 'axe-playwright'
-    // import { injectAxe, checkA11y } from 'axe-playwright';
     await page.goto('/order');
-    // await injectAxe(page);
-    // await checkA11y(page);
+    await injectAxe(page);
+    // Full page accessibility check
+    await checkA11y(page, undefined, { // Change null to undefined
+      detailedReport: true,
+      detailedReportOptions: { html: true }
+    });
     await auto('메뉴 카테고리 변경', { page });
-    // await checkA11y(page, '.menu-items');
-    console.log('Accessibility test placeholder executed.');
+    // Specific component accessibility check
+    await checkA11y(page, '.menu-items', {
+      axeOptions: { // Wrap rules in axeOptions
+        rules: {
+          'color-contrast': { enabled: true },
+          'keyboard-navigation': { enabled: true }
+        }
+      }
+    });
+    console.log('Accessibility test executed.');
   });
 });
