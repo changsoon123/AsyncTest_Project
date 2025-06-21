@@ -175,7 +175,10 @@ test.describe('고급 테스트 기능', () => {
     // Full page accessibility check
     await checkA11y(page, undefined, { // Change null to undefined
       detailedReport: true,
-      detailedReportOptions: { html: true }
+      detailedReportOptions: { html: true },
+      axeOptions: {
+        rules: {}
+      }
     });
     await auto('메뉴 카테고리 변경', { page });
     // Specific component accessibility check
@@ -187,6 +190,5 @@ test.describe('고급 테스트 기능', () => {
         }
       }
     });
-    console.log('Accessibility test executed.');
   });
 });
