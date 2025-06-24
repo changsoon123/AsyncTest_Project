@@ -73,7 +73,7 @@ export class OpenAIService {
       messages: [
         {
           role: 'system',
-          content: `주어진 시나리오 설명을 바탕으로 Playwright E2E 테스트 케이스를 위한 구조화된 JSON 데이터를 생성하세요. 각 테스트 케이스는 'description', 'setupInstructions' (선택 사항, Playwright 페이지 설정 또는 초기 URL), 'instructions' (auto-playwright에 전달될 지시), 'expectedElement' (기대되는 UI 요소의 data-testid 또는 CSS 선택자)를 포함해야 합니다.`,
+          content: `주어진 시나리오 설명을 바탕으로 Playwright E2E 테스트 케이스를 위한 구조화된 JSON 데이터를 생성하세요. 각 테스트 케이스는 'description', 'setupInstructions' (선택 사항, 테스트 시작 전 이동해야 하는 URL), 'instructions' (auto-playwright에 전달될 지시), 'expectedElement' (기대되는 UI 요소의 data-testid 또는 CSS 선택자)를 포함해야 합니다.`,
         },
         {
           role: 'user',
@@ -84,7 +84,7 @@ ${scenarios.map(s => `- ${s}`).join('\n')}
 [
   {
     "description": "시나리오 설명",
-    "setupInstructions": "Playwright setup (e.g., page.goto('/url'))",
+    "setupInstructions": "테스트 시작 전 이동해야 하는 URL (예: '/order')",
     "instructions": "auto-playwright instructions",
     "expectedElement": "data-testid or CSS selector"
   }

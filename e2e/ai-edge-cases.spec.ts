@@ -5,36 +5,52 @@ import { injectAxe, checkA11y } from 'axe-playwright'; // Import axe-playwright
 // Mock for auto-playwright's 'auto' function (kept due to installation issues)
 async function auto(description: string, options: { page: Page }) {
   console.log(`Mocking auto-playwright action: ${description}`);
-  // Simulate some page interaction based on description
-  if (description.includes('음식 주문 사이트로 이동')) {
-    await options.page.goto('/order');
-  } else if (description.includes('메뉴에서 피자 선택하고 장바구니 추가')) {
-    await options.page.click('[data-testid="pizza-menu-item"]');
-    await options.page.click('[data-testid="add-to-cart-button"]');
-  } else if (description.includes('결제 정보 입력 후 주문 완료')) {
-    await options.page.fill('[data-testid="payment-input"]', 'mock_payment_info');
-    await options.page.click('[data-testid="place-order-button"]');
-  } else if (description.includes('10개의 테스트 주문 생성')) {
-    // Simulate creating orders
-    for (let i = 0; i < 10; i++) {
-      await options.page.evaluate(() => console.log('Simulating order creation'));
+  const { page } = options;
+
+  try {
+    if (description.includes('음식 주문 사이트로 이동')) {
+      await page.goto('/order');
+    } else if (description.includes('메뉴에서 피자 선택하고 장바구니 추가')) {
+      await page.click('[data-testid="pizza-menu-item"]');
+      await page.click('[data-testid="add-to-cart-button"]');
+    } else if (description.includes('결제 정보 입력 후 주문 완료')) {
+      await page.fill('[data-testid="payment-input"]', 'mock_payment_info');
+      await page.click('[data-testid="place-order-button"]');
+    } else if (description.includes('10개의 테스트 주문 생성')) {
+      // Simulate creating orders
+      for (let i = 0; i < 10; i++) {
+        await page.evaluate(() => console.log('Simulating order creation'));
+      }
+    } else if (description.includes('사용자')) {
+      await page.goto('/order');
+      await page.fill('[data-testid="user-input"]', description);
+      await page.click('[data-testid="submit-button"]');
+    } else if (description.includes('복잡한 주문 프로세스 실행')) {
+      await page.goto('/checkout');
+      await page.fill('[data-testid="email-input"]', 'test@example.com');
+      await page.fill('[data-testid="address-input"]', '123 Test St');
+      await page.click('[data-testid="confirm-order-button"]');
+    } else if (description.includes('메뉴 카테고리 변경')) {
+      await page.click('[data-testid="category-dropdown"]');
+      await page.click('[data-testid="category-electronics"]');
+    } else if (description.includes('로그인')) {
+      await page.fill('[data-testid="email"]', 'test@example.com');
+      await page.fill('[data-testid="password"]', 'password123');
+      await page.click('[data-testid="submit-login"]');
+    } else if (description.includes('장바구니로 이동')) {
+      await page.click('[data-testid="cart-icon"]');
+    } else if (description.includes('결제 페이지로 이동')) {
+      await page.click('[data-testid="checkout-button"]');
+    } else if (description.includes('주문 완료')) {
+      await page.fill('[data-testid="email-input"]', 'test@example.com');
+      await page.fill('[data-testid="name-input"]', '홍길동');
+      await page.fill('[data-testid="address-input"]', '서울시 강남구');
+      await page.click('[data-testid="place-order"]');
+    } else {
+      console.warn(`Unknown auto-playwright action: ${description}`);
     }
-  } else if (description.includes('사용자')) {
-    await options.page.goto('/order');
-    await options.page.fill('[data-testid="user-input"]', description);
-    await options.page.click('[data-testid="submit-button"]');
-  } else if (description.includes('복잡한 주문 프로세스 실행')) {
-    await options.page.goto('/checkout');
-    await options.page.fill('[data-testid="email-input"]', 'test@example.com');
-    await options.page.fill('[data-testid="address-input"]', '123 Test St');
-    await options.page.click('[data-testid="confirm-order-button"]');
-  } else if (description.includes('메뉴 카테고리 변경')) {
-    await options.page.click('[data-testid="category-dropdown"]');
-    await options.page.click('[data-testid="category-electronics"]');
-  } else if (description.includes('사용자')) {
-    await options.page.goto('/order');
-    await options.page.fill('[data-testid="user-input"]', description);
-    await options.page.click('[data-testid="submit-button"]');
+  } catch (error) {
+    console.error(`Error during auto-playwright action: ${description}`, error);
   }
 }
 
@@ -53,17 +69,15 @@ async function generateAITestCases(scenarios: string[]): Promise<AITestCase[]> {
     const response = await axios.post('http://localhost:4000/ai/generate-test-cases', { scenarios });
     const generatedCases = response.data.testCases;
 
+    console.log('Generated AI Test Cases:', JSON.stringify(generatedCases, null, 2)); // Log the generated test cases
+
     return generatedCases.map((testCase: any) => ({
       description: testCase.description,
       setup: async (page: Page) => {
         // Execute setup instructions from AI
         if (testCase.setupInstructions) {
-          // This part would need a more sophisticated way to execute dynamic Playwright actions
-          // For now, we'll just log it or use a simple page.goto if it's a URL
-          console.log(`Executing AI setup: ${testCase.setupInstructions}`);
-          if (testCase.setupInstructions.startsWith('http')) {
-            await page.goto(testCase.setupInstructions);
-          }
+          console.log(`Navigating to: ${testCase.setupInstructions}`);
+          await page.goto(testCase.setupInstructions);
         }
       },
       instructions: testCase.instructions,
