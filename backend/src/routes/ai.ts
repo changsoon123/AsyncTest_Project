@@ -195,4 +195,26 @@ export default async function aiRoutes(fastify: FastifyInstance) {
     const testCases = await aiOrchestrator.generateTestScenarios(scenarios);
     return reply.send({ testCases });
   });
+
+  // Route to generate test orders
+  app.post('/generate-test-orders', {
+    schema: {
+      body: Type.Object({
+        numOrders: Type.Number(),
+      }),
+      response: {
+        200: Type.Object({ message: Type.String() }),
+      },
+    },
+  }, async (request, reply) => {
+    const { numOrders } = request.body;
+    console.log(`Generating ${numOrders} test orders...`);
+
+    // Simulate order creation (replace with actual logic if needed)
+    for (let i = 0; i < numOrders; i++) {
+      console.log(`Creating test order ${i + 1}...`);
+    }
+
+    return reply.send({ message: `${numOrders} test orders generated successfully.` });
+  });
 }

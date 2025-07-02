@@ -1,7 +1,7 @@
 # Test info
 
 - Name: 고급 테스트 기능 >> 네트워크 요청 패턴 분석
-- Location: C:\Cline\First_Project\AsyncFlow_Commerce\e2e\ai-edge-cases.spec.ts:157:7
+- Location: C:\Cline\First_Project\AsyncFlow_Commerce\e2e\ai-edge-cases.spec.ts:171:7
 
 # Error details
 
@@ -10,7 +10,7 @@ Error: expect(received).toBeGreaterThan(expected)
 
 Expected: > 3
 Received:   0
-    at C:\Cline\First_Project\AsyncFlow_Commerce\e2e\ai-edge-cases.spec.ts:179:34
+    at C:\Cline\First_Project\AsyncFlow_Commerce\e2e\ai-edge-cases.spec.ts:193:34
 ```
 
 # Page snapshot
@@ -25,136 +25,136 @@ Received:   0
 # Test source
 
 ```ts
-   79 |           console.log(`Navigating to: ${testCase.setupInstructions}`);
-   80 |           await page.goto(testCase.setupInstructions);
-   81 |         }
-   82 |       },
-   83 |       instructions: testCase.instructions,
-   84 |       expectedElement: testCase.expectedElement,
-   85 |     }));
-   86 |   } catch (error) {
-   87 |     console.error('Error generating AI test cases from backend:', error);
-   88 |     // Fallback to a simplified mock if backend call fails
-   89 |     return scenarios.map(scenario => ({
-   90 |       description: scenario,
-   91 |       setup: async (page: Page) => { /* default setup */ },
-   92 |       instructions: `Simulated action for: ${scenario}`,
-   93 |       expectedElement: 'body',
-   94 |     }));
-   95 |   }
-   96 | }
-   97 |
-   98 |
-   99 | test.describe('AI 기반 엣지 케이스 테스트', () => {
-  100 |   test('AI 생성 엣지 케이스 테스트', async ({ page }) => {
-  101 |     // GPT-4를 활용한 예상치 못한 시나리오 테스트
-  102 |     const edgeCases = await generateAITestCases([
-  103 |       '네트워크 연결이 불안정한 상황',
-  104 |       '결제 중 브라우저 새로고침',
-  105 |       '동일 사용자의 중복 주문',
-  106 |       '재고 소진 중 동시 주문'
-  107 |     ]);
-  108 |
-  109 |     for (const scenario of edgeCases) {
-  110 |       await test.step(`AI 시나리오: ${scenario.description}`, async () => {
-  111 |         await scenario.setup(page);
-  112 |         await auto(scenario.instructions, { page });
-  113 |         // Using a more robust check for visibility or presence
-  114 |         await expect(page.locator(scenario.expectedElement)).toBeVisible({ timeout: 10000 }).catch(() => {
-  115 |           console.warn(`Element ${scenario.expectedElement} not visible for scenario: ${scenario.description}`);
-  116 |         });
-  117 |       });
-  118 |     }
-  119 |   });
-  120 | });
-  121 |
-  122 | // Additional advanced testing features as outlined in projectbrief.md
-  123 | test.describe('고급 테스트 기능', () => {
-  124 |   test('주문 대시보드 시각적 일관성', async ({ page }) => {
-  125 |     await page.goto('/dashboard');
-  126 |     // Mocking auto for test order generation
-  127 |     await auto('10개의 테스트 주문 생성', { page });
-  128 |     // Visual regression test
-  129 |     await expect(page).toHaveScreenshot('dashboard-with-orders.png');
-  130 |     await expect(page.locator('.order-timeline')).toHaveScreenshot('timeline-component.png');
-  131 |     console.log('Visual regression test executed.');
-  132 |   });
-  133 |
-  134 |   test('대량 동시 주문 처리 성능', async ({ browser }) => {
-  135 |     // Simulate 50 concurrent users
-  136 |     const contexts = await Promise.all(
-  137 |       Array.from({ length: 50 }, () => browser.newContext())
-  138 |     );
-  139 |
-  140 |     const pages = await Promise.all(
-  141 |       contexts.map(context => context.newPage())
-  142 |     );
-  143 |
-  144 |     const startTime = Date.now();
-  145 |     await Promise.all(
-  146 |       pages.map(async (page, index) => {
-  147 |         await auto(`사용자 ${index}의 주문 완료`, { page });
-  148 |       })
-  149 |     );
-  150 |
-  151 |     const duration = Date.now() - startTime;
-  152 |     expect(duration).toBeLessThan(10000); // Expect within 10 seconds
+   93 |           console.log(`Navigating to: ${testCase.setupInstructions}`);
+   94 |           await page.goto(testCase.setupInstructions);
+   95 |         }
+   96 |       },
+   97 |       instructions: testCase.instructions,
+   98 |       expectedElement: testCase.expectedElement,
+   99 |     }));
+  100 |   } catch (error) {
+  101 |     console.error('Error generating AI test cases from backend:', error);
+  102 |     // Fallback to a simplified mock if backend call fails
+  103 |     return scenarios.map(scenario => ({
+  104 |       description: scenario,
+  105 |       setup: async (page: Page) => { /* default setup */ },
+  106 |       instructions: `Simulated action for: ${scenario}`,
+  107 |       expectedElement: 'body',
+  108 |     }));
+  109 |   }
+  110 | }
+  111 |
+  112 |
+  113 | test.describe('AI 기반 엣지 케이스 테스트', () => {
+  114 |   test('AI 생성 엣지 케이스 테스트', async ({ page }) => {
+  115 |     // GPT-4를 활용한 예상치 못한 시나리오 테스트
+  116 |     const edgeCases = await generateAITestCases([
+  117 |       '네트워크 연결이 불안정한 상황',
+  118 |       '결제 중 브라우저 새로고침',
+  119 |       '동일 사용자의 중복 주문',
+  120 |       '재고 소진 중 동시 주문'
+  121 |     ]);
+  122 |
+  123 |     for (const scenario of edgeCases) {
+  124 |       await test.step(`AI 시나리오: ${scenario.description}`, async () => {
+  125 |         await scenario.setup(page);
+  126 |         await auto(scenario.instructions, { page });
+  127 |         // Using a more robust check for visibility or presence
+  128 |         await expect(page.locator(scenario.expectedElement)).toBeVisible({ timeout: 10000 }).catch(() => {
+  129 |           console.warn(`Element ${scenario.expectedElement} not visible for scenario: ${scenario.description}`);
+  130 |         });
+  131 |       });
+  132 |     }
+  133 |   });
+  134 | });
+  135 |
+  136 | // Additional advanced testing features as outlined in projectbrief.md
+  137 | test.describe('고급 테스트 기능', () => {
+  138 |   test('주문 대시보드 시각적 일관성', async ({ page }) => {
+  139 |     await page.goto('/dashboard');
+  140 |     // Mocking auto for test order generation
+  141 |     await auto('10개의 테스트 주문 생성', { page });
+  142 |     // Visual regression test
+  143 |     await expect(page).toHaveScreenshot('dashboard-with-orders.png');
+  144 |     await expect(page.locator('.order-timeline')).toHaveScreenshot('timeline-component.png');
+  145 |     console.log('Visual regression test executed.');
+  146 |   });
+  147 |
+  148 |   test('대량 동시 주문 처리 성능', async ({ browser }) => {
+  149 |     // Simulate 50 concurrent users
+  150 |     const contexts = await Promise.all(
+  151 |       Array.from({ length: 50 }, () => browser.newContext())
+  152 |     );
   153 |
-  154 |     await Promise.all(contexts.map(context => context.close()));
-  155 |   });
-  156 |
-  157 |   test('네트워크 요청 패턴 분석', async ({ page }) => {
-  158 |     const requests: any[] = [];
-  159 |     const responses: any[] = [];
-  160 |
-  161 |     page.on('request', request => requests.push({
-  162 |       url: request.url(),
-  163 |       method: request.method(),
-  164 |       timestamp: Date.now()
-  165 |     }));
-  166 |
-  167 |     page.on('response', response => responses.push({
-  168 |       url: response.url(),
-  169 |       status: response.status(),
-  170 |       timestamp: Date.now()
-  171 |     }));
-  172 |
-  173 |     await auto('복잡한 주문 프로세스 실행', { page });
+  154 |     const pages = await Promise.all(
+  155 |       contexts.map(context => context.newPage())
+  156 |     );
+  157 |
+  158 |     const startTime = Date.now();
+  159 |     await Promise.all(
+  160 |       pages.map(async (page, index) => {
+  161 |         await auto(`사용자 ${index}의 주문 완료`, { page });
+  162 |       })
+  163 |     );
+  164 |
+  165 |     const duration = Date.now() - startTime;
+  166 |     expect(duration).toBeLessThan(10000); // Expect within 10 seconds
+  167 |
+  168 |     await Promise.all(contexts.map(context => context.close()));
+  169 |   });
+  170 |
+  171 |   test('네트워크 요청 패턴 분석', async ({ page }) => {
+  172 |     const requests: any[] = [];
+  173 |     const responses: any[] = [];
   174 |
-  175 |     const asyncRequests = requests.filter(req =>
-  176 |       req.url.includes('/api/') && req.method === 'POST'
-  177 |     );
-  178 |
-> 179 |     expect(asyncRequests.length).toBeGreaterThan(3);
-      |                                  ^ Error: expect(received).toBeGreaterThan(expected)
+  175 |     page.on('request', request => requests.push({
+  176 |       url: request.url(),
+  177 |       method: request.method(),
+  178 |       timestamp: Date.now()
+  179 |     }));
   180 |
-  181 |     // Network timing validation
-  182 |     const timings = await page.evaluate(() => performance.getEntriesByType('navigation') as PerformanceNavigationTiming[]);
-  183 |     expect(timings[0].loadEventEnd - timings[0].fetchStart).toBeLessThan(3000);
-  184 |   });
-  185 |
-  186 |   test('주문 페이지 접근성 검증', async ({ page }) => {
-  187 |     await page.goto('/order');
-  188 |     await injectAxe(page);
-  189 |     // Full page accessibility check
-  190 |     await checkA11y(page, undefined, { // Change null to undefined
-  191 |       detailedReport: true,
-  192 |       detailedReportOptions: { html: true },
-  193 |       axeOptions: {
-  194 |         rules: {}
-  195 |       }
-  196 |     });
-  197 |     await auto('메뉴 카테고리 변경', { page });
-  198 |     // Specific component accessibility check
-  199 |     await checkA11y(page, '.menu-items', {
-  200 |       axeOptions: { // Wrap rules in axeOptions
-  201 |         rules: {
-  202 |           'color-contrast': { enabled: true },
-  203 |           'keyboard-navigation': { enabled: true }
-  204 |         }
-  205 |       }
-  206 |     });
-  207 |   });
-  208 | });
-  209 |
+  181 |     page.on('response', response => responses.push({
+  182 |       url: response.url(),
+  183 |       status: response.status(),
+  184 |       timestamp: Date.now()
+  185 |     }));
+  186 |
+  187 |     await auto('복잡한 주문 프로세스 실행', { page });
+  188 |
+  189 |     const asyncRequests = requests.filter(req =>
+  190 |       req.url.includes('/api/') && req.method === 'POST'
+  191 |     );
+  192 |
+> 193 |     expect(asyncRequests.length).toBeGreaterThan(3);
+      |                                  ^ Error: expect(received).toBeGreaterThan(expected)
+  194 |
+  195 |     // Network timing validation
+  196 |     const timings = await page.evaluate(() => performance.getEntriesByType('navigation') as PerformanceNavigationTiming[]);
+  197 |     expect(timings[0].loadEventEnd - timings[0].fetchStart).toBeLessThan(3000);
+  198 |   });
+  199 |
+  200 |   test('주문 페이지 접근성 검증', async ({ page }) => {
+  201 |     await page.goto('/order');
+  202 |     await injectAxe(page);
+  203 |     // Full page accessibility check
+  204 |     await checkA11y(page, undefined, { // Change null to undefined
+  205 |       detailedReport: true,
+  206 |       detailedReportOptions: { html: true },
+  207 |       axeOptions: {
+  208 |         rules: {}
+  209 |       }
+  210 |     });
+  211 |     await auto('메뉴 카테고리 변경', { page });
+  212 |     // Specific component accessibility check
+  213 |     await checkA11y(page, '.menu-items', {
+  214 |       axeOptions: { // Wrap rules in axeOptions
+  215 |         rules: {
+  216 |           'color-contrast': { enabled: true },
+  217 |           'keyboard-navigation': { enabled: true }
+  218 |         }
+  219 |       }
+  220 |     });
+  221 |   });
+  222 | });
+  223 |
 ```

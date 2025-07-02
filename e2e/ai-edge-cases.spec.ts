@@ -17,9 +17,12 @@ async function auto(description: string, options: { page: Page }) {
       await page.fill('[data-testid="payment-input"]', 'mock_payment_info');
       await page.click('[data-testid="place-order-button"]');
     } else if (description.includes('10개의 테스트 주문 생성')) {
-      // Simulate creating orders
-      for (let i = 0; i < 10; i++) {
-        await page.evaluate(() => console.log('Simulating order creation'));
+      // Call backend to generate test orders
+      try {
+        const response = await axios.post('http://localhost:4000/ai/generate-test-orders', { numOrders: 10 });
+        console.log('Test orders generated:', response.data);
+      } catch (error) {
+        console.error('Error generating test orders:', error);
       }
     } else if (description.includes('사용자')) {
       await page.goto('/order');
@@ -33,19 +36,30 @@ async function auto(description: string, options: { page: Page }) {
     } else if (description.includes('메뉴 카테고리 변경')) {
       await page.click('[data-testid="category-dropdown"]');
       await page.click('[data-testid="category-electronics"]');
-    } else if (description.includes('로그인')) {
-      await page.fill('[data-testid="email"]', 'test@example.com');
-      await page.fill('[data-testid="password"]', 'password123');
-      await page.click('[data-testid="submit-login"]');
-    } else if (description.includes('장바구니로 이동')) {
-      await page.click('[data-testid="cart-icon"]');
-    } else if (description.includes('결제 페이지로 이동')) {
-      await page.click('[data-testid="checkout-button"]');
-    } else if (description.includes('주문 완료')) {
+    } else if (description.includes('10개의 테스트 주문 생성')) {
+      // Simulate creating orders
+      for (let i = 0; i < 10; i++) {
+        await page.evaluate(() => console.log('Simulating order creation'));
+      }
+    } else if (description.includes('사용자')) {
+      await page.goto('/order');
+      await page.fill('[data-testid="user-input"]', description);
+      await page.click('[data-testid="submit-button"]');
+    } else if (description.includes('복잡한 주문 프로세스 실행')) {
+      await page.goto('/checkout');
       await page.fill('[data-testid="email-input"]', 'test@example.com');
-      await page.fill('[data-testid="name-input"]', '홍길동');
-      await page.fill('[data-testid="address-input"]', '서울시 강남구');
-      await page.click('[data-testid="place-order"]');
+      await page.fill('[data-testid="address-input"]', '123 Test St');
+      await page.click('[data-testid="confirm-order-button"]');
+    } else if (description.includes('사용자')) {
+      await page.goto('/order');
+      await page.fill('[data-testid="user-input"]', description);
+      await page.click('[data-testid="submit-button"]');
+    } else if (description.includes('사용자')) {
+      // Simulate user specific actions
+      const userIndex = description.match(/사용자 (\d+)/)?.[1];
+      await page.goto('/order');
+      await page.fill('[data-testid="user-input"]', `User ${userIndex}`);
+      await page.click('[data-testid="submit-button"]');
     } else {
       console.warn(`Unknown auto-playwright action: ${description}`);
     }
